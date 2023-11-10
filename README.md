@@ -1,1 +1,1 @@
-# mahd-lang
+# Mahd programming language
