@@ -13,14 +13,26 @@ public class WordTypes {
     public static final WordType INT_TYPE_WORD
             = new WordType("int", ":number");
 
+    public static final  WordType INT_WORD
+            = new WordType("int word", "^[+-]?(0[xX][0-9a-fA-F]+|0[0-7]*|[1-9][0-9]*)$"); // hex(0x0f), oct (0123) and decimal 123
+
     public static final WordType DOUBLE_TYPE_WORD
             = new WordType("double", " :double");
+
+    public static final WordType DOUBLE_WORD
+            = new WordType("double word", "^[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)$");
 
     public static final WordType CHAR_TYPE_WORD
             = new WordType("char", " :char");
 
+    public static final WordType CHAR_WORD
+            = new WordType("character", "\\'.\\'");
+
     public static final WordType STRING_TYPE_WORD
             = new WordType("string", " :string");
+
+    public static final WordType STRING_WORD
+            = new WordType("string", "\\\".*\\\"");
 
     public static final WordType STRING_ARRAY_WORD
             = new WordType("array string", " :string[]");
@@ -105,6 +117,72 @@ public class WordTypes {
 
     public static final WordType LOGICAL_NOT_WORD
             = new WordType("lognot", "\\!");
+
+    public static final WordType BITWISE_AND_WORD
+            = new WordType("bitwise and", "&");
+
+    public static final WordType BITWISE_OR_WORD
+            = new WordType("bitwise or", "\\|");
+
+    public static final WordType SHIFT_RIGHT_WORD
+            = new WordType("shift right", "\\>\\>");
+
+    public static final WordType SHIFT_LEFT_WORD
+            = new WordType("shift left", "\\<\\<");
+
+    public static final WordType BITWISE_UNARY_NOT_WORD
+            = new WordType("bitwise not", "~");
+
+    public static final WordType TERNARY_IF_WORD
+            = new WordType("ternary if", "?");
+
+    public static final WordType IF_WORD
+            = new WordType("if", "if");
+
+    public static final WordType ELIF_WORD
+            = new WordType("else if", "else if");
+
+    public static final WordType ELSE_WORD
+            = new WordType("else", "else");
+
+    public static final WordType FOR_WORD
+            = new WordType("for", "for");
+
+    public static final WordType WHILE_WORD
+            = new WordType("while", "while");
+
+    public static final WordType DO_WHILE_WORD
+            = new WordType("do while", "do");
+
+    public static final WordType LOAD_ARRAY_WORD
+            = new WordType("load array", "loadArray");
+
+    public static final WordType PRINT_ARRAY_WORD
+            = new WordType("print array", "printArray");
+
+    public static final WordType LOAD_MATRIX_WORD
+            = new WordType("load matrix", "loadMatrix");
+
+    public static final WordType PRINT_MATRIX_WORD
+            = new WordType("print matrix", "printMatrix");
+
+    public static final WordType FUNCTION_WORD
+            = new WordType("function", "function");
+
+    public static final WordType OPEN_CURLY_BRACKET_WORD
+            = new WordType("open curly bracket", "\\{");
+
+    public static final WordType CLOSED_CURLY_BRACKET_WORD
+            = new WordType("closed curly bracket", "\\}");
+
+    public static final WordType RETURN_WORD
+            = new WordType("return", "return");
+
+    public static final WordType CLASS_WORD
+            = new WordType("class", "Class");
+
+    public static final WordType EXTENDS_CLASS_WORD
+            = new WordType("extends", ":");
 
 
     static {
