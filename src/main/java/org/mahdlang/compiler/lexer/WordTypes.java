@@ -26,7 +26,7 @@ public class WordTypes {
             = new WordType("char", " :char");
 
     public static final WordType CHAR_WORD
-            = new WordType("character", "\\'.\\'");
+            = new WordType("character", "\\'.\\'"); // \\ -> escape from regex   \ -> escape from java
 
     public static final WordType STRING_TYPE_WORD
             = new WordType("string", " :string");
@@ -34,14 +34,20 @@ public class WordTypes {
     public static final WordType STRING_WORD
             = new WordType("string", "\\\".*\\\"");
 
-    public static final WordType STRING_ARRAY_WORD
+    public static final WordType STRING_ARRAY_TYPE_WORD
             = new WordType("array string", " :string[]");
+
+    public static final WordType STRING_ARRAY_WORD
+            = new WordType("array string word", "\\[((\\\".*\\\",)*(\\\".*\\\"))\\]|\\[\\]");
 
     public static final WordType STRING_MATRIX_WORD
             = new WordType("matrix string", " :string[][]");
 
-    public static final WordType INT_ARRAY_WORD
+    public static final WordType INT_ARRAY_TYPE_WORD
             = new WordType("array number", " :number[]");
+
+    public static final WordType INT_ARRAY_WORD
+            = new WordType("array number word", "\\[((" + INT_WORD + ",)*(" + INT_WORD + "))\\]|\\[\\]");
 
     public static final WordType INT_MATRIX_WORD
             = new WordType("matrix number", " :number[][]");
@@ -183,6 +189,9 @@ public class WordTypes {
 
     public static final WordType EXTENDS_CLASS_WORD
             = new WordType("extends", ":");
+
+    public static final WordType NAME_WORD
+            = new WordType("name", "[a-zA-Z_][a-zA-Z0-9_]*");
 
 
     static {
