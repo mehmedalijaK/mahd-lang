@@ -11,8 +11,5 @@ public class Main {
         String code = fileLoader.load("C:\\Users\\mehmedalijak\\Desktop\\RAF\\MahdLang Compiler\\src\\main\\resources\\run.m");
 
         System.out.println(lexer.lex(code));
-
-
-
     }
 }
