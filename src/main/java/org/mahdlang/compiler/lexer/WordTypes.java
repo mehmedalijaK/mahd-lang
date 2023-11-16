@@ -10,7 +10,6 @@ public class WordTypes {
         REGEXES.put(word.getRegex(), word);
     }
 
-
     public static final WordType MAIN_WORD
             = new WordType("main", "main"); //checked
     public static final WordType NAME_WORD
@@ -33,7 +32,6 @@ public class WordTypes {
             = new WordType("matrix number word", "(\\{("+INT_ARRAY_WORD.getRegex()+",)*"+INT_ARRAY_WORD.getRegex()+"\\})"); //checked
     public static final WordType EMPTY_MATRIX_WORD
             = new WordType("empty matrix word", "\\{\\[\\]\\}"); //checked
-
     public static final WordType DOUBLE_TYPE_WORD
             = new WordType("double", ":double"); //checked
     public static final WordType DOUBLE_WORD
@@ -46,7 +44,6 @@ public class WordTypes {
             = new WordType("matrix double", ":double\\[\\]\\[\\]"); //checked
     public static final WordType DOUBLE_MATRIX_WORD
             = new WordType("matrix double word", "(\\{("+DOUBLE_ARRAY_WORD.getRegex()+",)*"+DOUBLE_ARRAY_WORD.getRegex()+"\\})"); //checked
-
     public static final WordType CHAR_TYPE_WORD
             = new WordType("char", ":char"); //checked
     public static final WordType CHAR_WORD
@@ -59,7 +56,6 @@ public class WordTypes {
             = new WordType("matrix char", ":char\\[\\]\\[\\]"); //checked
     public static final WordType CHAR_MATRIX_WORD
             = new WordType("matrix char word", "(\\{("+CHAR_ARRAY_WORD.getRegex()+",)*"+CHAR_ARRAY_WORD.getRegex()+"\\})"); //checked
-
     public static final WordType STRING_TYPE_WORD
             = new WordType("string", ":string"); //checked
     public static final WordType STRING_WORD
@@ -80,7 +76,6 @@ public class WordTypes {
             = new WordType("input", "input"); //checked
     public static final WordType PRINT_WORD
             = new WordType("print", "print"); //checked
-
     public static final WordType PLUS_WORD
             = new WordType("plus", "\\+"); //checked
     public static final WordType MINUS_WORD
@@ -91,12 +86,10 @@ public class WordTypes {
             = new WordType("div", "/"); //checked
     public static final WordType MOD_WORD
             = new WordType("mod", "\\%"); //checked
-
     public static final WordType INCREMENT_WORD
             = new WordType("increment", "\\+\\+"); //checked
     public static final WordType DECREMENT_WORD
             = new WordType("decrement", "--"); //checked
-
     public static final WordType EQUALS_SIGN
             = new WordType("equals", "\\=\\="); //checked
     public static final WordType NOT_EQUALS_SIGN
@@ -109,7 +102,6 @@ public class WordTypes {
             = new WordType("greater", "\\>"); //checked
     public static final WordType GREATER_OR_EQUALS_SIGN
             = new WordType("greater or equals", "\\>\\="); //checked
-
     public static final WordType LOGICAL_AND_WORD
             = new WordType("logand", "&&"); //checked
     public static final WordType LOGICAL_OR_WORD
@@ -128,61 +120,48 @@ public class WordTypes {
             = new WordType("bitwise not", "~"); //checked
     public static final WordType TERNARY_IF_WORD
             = new WordType("ternary if", "\\?"); //checked
-
     public static final WordType TERNARY_IF_ELSE_WORD
             = new WordType("ternary if else", "\\:"); //checked
-
     public static final WordType IF_WORD
             = new WordType("if", "if"); //checked
     public static final WordType ELIF_WORD
             = new WordType("else if", "elif"); //checked
     public static final WordType ELSE_WORD
             = new WordType("else", "else"); //checked
-
     public static final WordType FOR_WORD
             = new WordType("for", "for"); //checked
     public static final WordType WHILE_WORD
             = new WordType("while", "while"); //checked
     public static final WordType DO_WHILE_WORD
             = new WordType("do while", "do"); //checked
-
     public static final WordType LOAD_ARRAY_WORD
             = new WordType("load array", "loadArray"); //checked
     public static final WordType PRINT_ARRAY_WORD
             = new WordType("print array", "printArray"); //checked
-
     public static final WordType LOAD_MATRIX_WORD
             = new WordType("load matrix", "loadMatrix"); //checked
     public static final WordType PRINT_MATRIX_WORD
             = new WordType("print matrix", "printMatrix"); //checked
-
     public static final WordType FUNCTION_WORD
             = new WordType("function", "function"); //checked
-
     public static final WordType OPEN_CURLY_BRACKET_WORD
             = new WordType("open curly bracket", "\\{"); //checked
     public static final WordType CLOSED_CURLY_BRACKET_WORD
             = new WordType("closed curly bracket", "\\}"); //checked
-
     public static final WordType OPEN_BRACKET_WORD
             = new WordType("open bracket", "\\("); //checked
     public static final WordType CLOSED_BRACKET_WORD
             = new WordType("closed bracket", "\\)"); //checked
-
     public static final WordType OPEN_SQUARE_BRACKET_WORD
             = new WordType("open square bracket", "\\["); //checked
     public static final WordType CLOSED_SQUARE_BRACKET_WORD
             = new WordType("closed square bracket", "\\]"); //checked
-
     public static final WordType RETURN_WORD
             = new WordType("return", "return"); //checked
-
     public static final WordType CLASS_WORD
             = new WordType("class", "Class"); //checked
-
     public static final WordType EXTENDS_CLASS_WORD
             = new WordType("extends", "extends"); //checked
-
 
 
     static {
@@ -196,21 +175,18 @@ public class WordTypes {
         putWordTypeToMap(INT_MATRIX_TYPE_WORD);
         putWordTypeToMap(INT_MATRIX_WORD);
         putWordTypeToMap(EMPTY_MATRIX_WORD);
-
         putWordTypeToMap(DOUBLE_TYPE_WORD);
         putWordTypeToMap(DOUBLE_WORD);
         putWordTypeToMap(DOUBLE_ARRAY_TYPE_WORD);
         putWordTypeToMap(DOUBLE_ARRAY_WORD);
         putWordTypeToMap(DOUBLE_MATRIX_TYPE_WORD);
         putWordTypeToMap(DOUBLE_MATRIX_WORD);
-
         putWordTypeToMap(CHAR_TYPE_WORD);
         putWordTypeToMap(CHAR_WORD);
         putWordTypeToMap(CHAR_ARRAY_TYPE_WORD);
         putWordTypeToMap(CHAR_ARRAY_WORD);
         putWordTypeToMap(CHAR_MATRIX_TYPE_WORD);
         putWordTypeToMap(CHAR_MATRIX_WORD);
-
         putWordTypeToMap(STRING_TYPE_WORD);
         putWordTypeToMap(STRING_WORD);
         putWordTypeToMap(STRING_ARRAY_TYPE_WORD);
@@ -219,28 +195,23 @@ public class WordTypes {
         putWordTypeToMap(STRING_MATRIX_WORD);
         putWordTypeToMap(STRING_LEN_WORD);
         putWordTypeToMap(ARRAY_SIZE_WORD);
-
         putWordTypeToMap(MAIN_WORD);
         putWordTypeToMap(ASSIGN_WORD);
         putWordTypeToMap(INPUT_WORD);
         putWordTypeToMap(PRINT_WORD);
-
         putWordTypeToMap(PLUS_WORD);
         putWordTypeToMap(MINUS_WORD);
         putWordTypeToMap(TIMES_WORD);
         putWordTypeToMap(DIV_WORD);
         putWordTypeToMap(MOD_WORD);
-
         putWordTypeToMap(INCREMENT_WORD);
         putWordTypeToMap(DECREMENT_WORD);
-
         putWordTypeToMap(EQUALS_SIGN);
         putWordTypeToMap(NOT_EQUALS_SIGN);
         putWordTypeToMap(LESS_THAN_SIGN);
         putWordTypeToMap(LESS_OR_EQUALS_SIGN);
         putWordTypeToMap(GREATER_THAN_SIGN);
         putWordTypeToMap(GREATER_OR_EQUALS_SIGN);
-
         putWordTypeToMap(LOGICAL_AND_WORD);
         putWordTypeToMap(LOGICAL_OR_WORD);
         putWordTypeToMap(LOGICAL_NOT_WORD);
@@ -251,33 +222,23 @@ public class WordTypes {
         putWordTypeToMap(BITWISE_UNARY_NOT_WORD);
         putWordTypeToMap(TERNARY_IF_WORD);
         putWordTypeToMap(TERNARY_IF_ELSE_WORD);
-
         putWordTypeToMap(IF_WORD);
         putWordTypeToMap(ELIF_WORD);
         putWordTypeToMap(ELSE_WORD);
-
         putWordTypeToMap(FOR_WORD);
         putWordTypeToMap(WHILE_WORD);
         putWordTypeToMap(DO_WHILE_WORD);
-
         putWordTypeToMap(LOAD_ARRAY_WORD);
         putWordTypeToMap(PRINT_ARRAY_WORD);
-
         putWordTypeToMap(LOAD_MATRIX_WORD);
         putWordTypeToMap(PRINT_MATRIX_WORD);
-
         putWordTypeToMap(FUNCTION_WORD);
-
         putWordTypeToMap(OPEN_CURLY_BRACKET_WORD);
         putWordTypeToMap(CLOSED_CURLY_BRACKET_WORD);
-
         putWordTypeToMap(OPEN_BRACKET_WORD);
         putWordTypeToMap(CLOSED_BRACKET_WORD);
-
         putWordTypeToMap(RETURN_WORD);
-
         putWordTypeToMap(CLASS_WORD);
-
         putWordTypeToMap(EXTENDS_CLASS_WORD);
         putWordTypeToMap(NAME_WORD);
     }
