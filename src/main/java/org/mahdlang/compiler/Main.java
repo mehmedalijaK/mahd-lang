@@ -8,7 +8,7 @@ public class Main {
         FileLoader fileLoader = FileLoader.getFileLoader();
         Lexer lexer = Lexer.getLexer();
 
-        String code = fileLoader.load("C:\\Users\\mehmedalijak\\Desktop\\RAF\\MahdLang Compiler\\src\\main\\resources\\test.txt");
+        String code = fileLoader.load("C:\\Users\\mehmedalijak\\Desktop\\RAF\\MahdLang Compiler\\src\\main\\resources\\run.m");
 
         System.out.println(lexer.lex(code));
 
