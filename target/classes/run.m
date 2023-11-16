@@ -1,7 +1,9 @@
 a :number = 0xf
 b :string = "test"
+b.len
 c :number[] = [1]
 d :number[] = []
+c.size
 matrix :number[][] = {[1,2,3],[2,2]}
 matrix1 :number[][] = {[12,2,2]}
 matrix2 :number[][] = {[]}

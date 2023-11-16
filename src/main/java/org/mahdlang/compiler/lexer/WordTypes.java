@@ -72,7 +72,10 @@ public class WordTypes {
             = new WordType("matrix string", ":string\\[\\]\\[\\]"); //checked
     public static final WordType STRING_MATRIX_WORD
             = new WordType("matrix string word", "(\\{("+STRING_ARRAY_WORD.getRegex()+",)*"+STRING_ARRAY_WORD.getRegex()+"\\})"); //checked
-
+    public static final WordType STRING_LEN_WORD
+            = new WordType("len string word", "([a-zA-Z_][a-zA-Z0-9_]*).len");
+    public static final WordType ARRAY_SIZE_WORD
+            = new WordType("size array word", "([a-zA-Z_][a-zA-Z0-9_]*).size");
     public static final WordType INPUT_WORD
             = new WordType("input", "input"); //checked
     public static final WordType PRINT_WORD
@@ -214,6 +217,8 @@ public class WordTypes {
         putWordTypeToMap(STRING_ARRAY_WORD);
         putWordTypeToMap(STRING_MATRIX_TYPE_WORD);
         putWordTypeToMap(STRING_MATRIX_WORD);
+        putWordTypeToMap(STRING_LEN_WORD);
+        putWordTypeToMap(ARRAY_SIZE_WORD);
 
         putWordTypeToMap(MAIN_WORD);
         putWordTypeToMap(ASSIGN_WORD);
