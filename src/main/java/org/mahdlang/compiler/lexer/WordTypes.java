@@ -11,157 +11,165 @@ public class WordTypes {
     }
 
     public static final WordType MAIN_WORD
-            = new WordType("main", "main"); //checked
+            = new WordType("main", "main"); //added
     public static final WordType NAME_WORD
-            = new WordType("name", "[a-zA-Z_][a-zA-Z0-9_]*"); //checked
+            = new WordType("name", "[a-zA-Z_][a-zA-Z0-9_]*"); //added
     public static final WordType ASSIGN_WORD
-            = new WordType("assign", "\\="); //checked
+            = new WordType("assign", "\\="); //added
+    public static final WordType COMMAND_END
+            = new WordType("endcommand", ";"); //added
+    public static final WordType COMMAND_ARG
+            = new WordType("commandarg", ","); //added
+    public static final WordType DEFINE_TYPE
+            = new WordType("definetype", "\\:"); //added
     public static final WordType INT_TYPE_WORD
-            = new WordType("int", ":number"); //checked
+            = new WordType("int", "number"); //added
     public static final  WordType INT_WORD
-            = new WordType("int word", "[+-]?(0[xX][0-9a-fA-F]+|0[0-7]*|[1-9][0-9]*)"); // hex(0x0f), oct (0123) and decimal 123 checked
+            = new WordType("intword", "[+-]?(0[xX][0-9a-fA-F]+|0[0-7]*|[1-9][0-9]*)"); // hex(0x0f), oct (0123) and decimal 123 added
     public static final WordType INT_ARRAY_TYPE_WORD
-            = new WordType("array number", ":number\\[\\]"); //checked
+            = new WordType("arraynumber", "number\\[\\]"); //added
     public static final WordType INT_ARRAY_WORD
-            = new WordType("array number word", "\\[(" + INT_WORD.getRegex() + "\\,)*(" + INT_WORD.getRegex() + ")\\]"); //checked
+            = new WordType("arraynumberword", "\\[(" + INT_WORD.getRegex() + "\\,)*(" + INT_WORD.getRegex() + ")\\]"); //added
     public static final WordType EMPTY_ARRAY_WORD
-            = new WordType("empty array word", "\\[\\]"); //checked
+            = new WordType("emptyarrayword", "\\[\\]"); //added
+    public static final WordType EMPTY_WORD
+            = new WordType("empty", "empty"); //added
     public static final WordType INT_MATRIX_TYPE_WORD
-            = new WordType("matrix number", ":number\\[\\]\\[\\]"); //checked
+            = new WordType("matrixnumber", "number\\[\\]\\[\\]"); //added
     public static final WordType INT_MATRIX_WORD
-            = new WordType("matrix number word", "(\\{("+INT_ARRAY_WORD.getRegex()+",)*"+INT_ARRAY_WORD.getRegex()+"\\})"); //checked
+            = new WordType("matrixnumberword", "(\\{("+INT_ARRAY_WORD.getRegex()+",)*"+INT_ARRAY_WORD.getRegex()+"\\})"); //added
     public static final WordType EMPTY_MATRIX_WORD
-            = new WordType("empty matrix word", "\\{\\[\\]\\}"); //checked
+            = new WordType("emptymatrixword", "\\{\\[\\]\\}"); //added
     public static final WordType DOUBLE_TYPE_WORD
-            = new WordType("double", ":double"); //checked
+            = new WordType("double", "double"); //added
     public static final WordType DOUBLE_WORD
-            = new WordType("double word", "[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)"); //checked
+            = new WordType("doubleword", "[+-]?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)"); //added
     public static final WordType DOUBLE_ARRAY_TYPE_WORD
-            = new WordType("array double", ":double\\[\\]"); //checked
+            = new WordType("arraydouble", "double\\[\\]"); //added
     public static final WordType DOUBLE_ARRAY_WORD
-            = new WordType("array double word", "\\[((" + DOUBLE_WORD.getRegex() + ",)*(" + DOUBLE_WORD.getRegex() + "))\\]"); //checked
+            = new WordType("arraydoubleword", "\\[((" + DOUBLE_WORD.getRegex() + ",)*(" + DOUBLE_WORD.getRegex() + "))\\]"); //added
     public static final WordType DOUBLE_MATRIX_TYPE_WORD
-            = new WordType("matrix double", ":double\\[\\]\\[\\]"); //checked
+            = new WordType("matrixdouble", "double\\[\\]\\[\\]"); //added
     public static final WordType DOUBLE_MATRIX_WORD
-            = new WordType("matrix double word", "(\\{("+DOUBLE_ARRAY_WORD.getRegex()+",)*"+DOUBLE_ARRAY_WORD.getRegex()+"\\})"); //checked
+            = new WordType("matrix double word", "(\\{("+DOUBLE_ARRAY_WORD.getRegex()+",)*"+DOUBLE_ARRAY_WORD.getRegex()+"\\})"); //added
     public static final WordType CHAR_TYPE_WORD
-            = new WordType("char", ":char"); //checked
+            = new WordType("char", "char"); //added
     public static final WordType CHAR_WORD
-            = new WordType("character", "\\'.\\'"); // \\ -> escape from regex   \ -> escape from java //checked
+            = new WordType("character", "\\'.\\'"); // \\ -> escape from regex   \ -> escape from java //added
     public static final WordType CHAR_ARRAY_TYPE_WORD
-            = new WordType("array char", ":char\\[\\]"); //checked
+            = new WordType("arraychar", "char\\[\\]"); //added
     public static final WordType CHAR_ARRAY_WORD
-            = new WordType("array char word","\\[((\\'.\\',)*(\\'.\\'))\\]"); //checked
+            = new WordType("arraycharword","\\[((\\'.\\',)*(\\'.\\'))\\]"); //added
     public static final WordType CHAR_MATRIX_TYPE_WORD
-            = new WordType("matrix char", ":char\\[\\]\\[\\]"); //checked
+            = new WordType("matrixchar", "char\\[\\]\\[\\]"); //added
     public static final WordType CHAR_MATRIX_WORD
-            = new WordType("matrix char word", "(\\{("+CHAR_ARRAY_WORD.getRegex()+",)*"+CHAR_ARRAY_WORD.getRegex()+"\\})"); //checked
+            = new WordType("matrixcharword", "(\\{("+CHAR_ARRAY_WORD.getRegex()+",)*"+CHAR_ARRAY_WORD.getRegex()+"\\})"); //added
     public static final WordType STRING_TYPE_WORD
-            = new WordType("string", ":string"); //checked
+            = new WordType("string", "string"); //added
     public static final WordType STRING_WORD
-            = new WordType("string word", "\\\".*\\\""); //checked
+            = new WordType("stringword", "\\\".*\\\""); //added
     public static final WordType STRING_ARRAY_TYPE_WORD
-            = new WordType("array string", ":string\\[\\]"); //checked
+            = new WordType("arraystring", "string\\[\\]"); //added
     public static final WordType STRING_ARRAY_WORD
-            = new WordType("array string word", "\\[((\\\".*\\\",)*(\\\".*\\\"))\\]"); //checked
+            = new WordType("arraystringword", "\\[((\\\".*\\\",)*(\\\".*\\\"))\\]"); //added
     public static final WordType STRING_MATRIX_TYPE_WORD
-            = new WordType("matrix string", ":string\\[\\]\\[\\]"); //checked
+            = new WordType("matrixstring", "string\\[\\]\\[\\]"); //added
     public static final WordType STRING_MATRIX_WORD
-            = new WordType("matrix string word", "(\\{("+STRING_ARRAY_WORD.getRegex()+",)*"+STRING_ARRAY_WORD.getRegex()+"\\})"); //checked
+            = new WordType("matrixstringword", "(\\{("+STRING_ARRAY_WORD.getRegex()+",)*"+STRING_ARRAY_WORD.getRegex()+"\\})"); //added
     public static final WordType STRING_LEN_WORD
-            = new WordType("len string word", "([a-zA-Z_][a-zA-Z0-9_]*).len");
+            = new WordType("lenstringword", "([a-zA-Z_][a-zA-Z0-9_]*).len"); //added
     public static final WordType ARRAY_SIZE_WORD
-            = new WordType("size array word", "([a-zA-Z_][a-zA-Z0-9_]*).size");
+            = new WordType("sizearrayword", "([a-zA-Z_][a-zA-Z0-9_]*).size"); //added
     public static final WordType INPUT_WORD
-            = new WordType("input", "input"); //checked
+            = new WordType("input", "input"); //added
     public static final WordType PRINT_WORD
-            = new WordType("print", "print"); //checked
+            = new WordType("print", "print"); //added
     public static final WordType PLUS_WORD
-            = new WordType("plus", "\\+"); //checked
+            = new WordType("plus", "\\+"); //added
     public static final WordType MINUS_WORD
-            = new WordType("minus", "\\-"); //checked
+            = new WordType("minus", "\\-"); //added
     public static final WordType TIMES_WORD
-            = new WordType("times", "\\*"); //checked
+            = new WordType("times", "\\*"); //added
     public static final WordType DIV_WORD
-            = new WordType("div", "/"); //checked
+            = new WordType("div", "/"); //added
     public static final WordType MOD_WORD
-            = new WordType("mod", "\\%"); //checked
+            = new WordType("mod", "\\%"); //added
     public static final WordType INCREMENT_WORD
-            = new WordType("increment", "\\+\\+"); //checked
+            = new WordType("increment", "\\+\\+"); //added
     public static final WordType DECREMENT_WORD
-            = new WordType("decrement", "--"); //checked
+            = new WordType("decrement", "--"); //added
     public static final WordType EQUALS_SIGN
-            = new WordType("equals", "\\=\\="); //checked
+            = new WordType("equals", "\\=\\="); //added
     public static final WordType NOT_EQUALS_SIGN
-            = new WordType("not equals", "\\!\\="); //checked
+            = new WordType("notequals", "\\!\\="); //added
     public static final WordType LESS_THAN_SIGN
-            = new WordType("less", "\\<"); //checked
+            = new WordType("less", "\\<"); //added
     public static final WordType LESS_OR_EQUALS_SIGN
-            = new WordType("less or equals", "\\<\\="); //checked
+            = new WordType("lessorequals", "\\<\\="); //added
     public static final WordType GREATER_THAN_SIGN
-            = new WordType("greater", "\\>"); //checked
+            = new WordType("greater", "\\>"); //added
     public static final WordType GREATER_OR_EQUALS_SIGN
-            = new WordType("greater or equals", "\\>\\="); //checked
+            = new WordType("greaterorequals", "\\>\\="); //added
     public static final WordType LOGICAL_AND_WORD
-            = new WordType("logand", "&&"); //checked
+            = new WordType("logand", "&&"); //added
     public static final WordType LOGICAL_OR_WORD
-            = new WordType("logor", "\\|\\|"); //checked
+            = new WordType("logor", "\\|\\|"); //added
     public static final WordType LOGICAL_NOT_WORD
             = new WordType("lognot", "\\!"); //checked
     public static final WordType BITWISE_AND_WORD
-            = new WordType("bitwise and", "&"); //checked
+            = new WordType("bitwiseand", "&"); //added
     public static final WordType BITWISE_OR_WORD
-            = new WordType("bitwise or", "\\|"); //checked
+            = new WordType("bitwiseor", "\\|"); //added
     public static final WordType SHIFT_RIGHT_WORD
-            = new WordType("shift right", "\\>\\>"); //checked
+            = new WordType("shiftright", "\\>\\>"); //added
     public static final WordType SHIFT_LEFT_WORD
-            = new WordType("shift left", "\\<\\<"); //checked
+            = new WordType("shiftleft", "\\<\\<"); //added
     public static final WordType BITWISE_UNARY_NOT_WORD
-            = new WordType("bitwise not", "~"); //checked
+            = new WordType("bitwisenot", "~"); //added
     public static final WordType TERNARY_IF_WORD
-            = new WordType("ternary if", "\\?"); //checked
+            = new WordType("ternaryif", "\\?"); //added
     public static final WordType TERNARY_IF_ELSE_WORD
-            = new WordType("ternary if else", "\\:"); //checked
+            = new WordType("ternaryifelse", "then"); //added
     public static final WordType IF_WORD
-            = new WordType("if", "if"); //checked
+            = new WordType("if", "if"); //added
     public static final WordType ELIF_WORD
-            = new WordType("else if", "elif"); //checked
+            = new WordType("elseif", "elif"); //added
     public static final WordType ELSE_WORD
-            = new WordType("else", "else"); //checked
+            = new WordType("else", "else"); //added
     public static final WordType FOR_WORD
-            = new WordType("for", "for"); //checked
+            = new WordType("for", "for"); //added
     public static final WordType WHILE_WORD
-            = new WordType("while", "while"); //checked
+            = new WordType("while", "while"); //added
     public static final WordType DO_WHILE_WORD
-            = new WordType("do while", "do"); //checked
+            = new WordType("dowhile", "do"); //added
     public static final WordType LOAD_ARRAY_WORD
-            = new WordType("load array", "loadArray"); //checked
+            = new WordType("loadarray", "loadArray"); //added
     public static final WordType PRINT_ARRAY_WORD
-            = new WordType("print array", "printArray"); //checked
+            = new WordType("printarray", "printArray"); //added
     public static final WordType LOAD_MATRIX_WORD
-            = new WordType("load matrix", "loadMatrix"); //checked
+            = new WordType("loadmatrix", "loadMatrix"); //added
     public static final WordType PRINT_MATRIX_WORD
-            = new WordType("print matrix", "printMatrix"); //checked
+            = new WordType("printmatrix", "printMatrix"); //added
     public static final WordType FUNCTION_WORD
-            = new WordType("function", "function"); //checked
+            = new WordType("function", "function"); //added
     public static final WordType OPEN_CURLY_BRACKET_WORD
-            = new WordType("open curly bracket", "\\{"); //checked
+            = new WordType("opencurlybracket", "\\{"); //added
     public static final WordType CLOSED_CURLY_BRACKET_WORD
-            = new WordType("closed curly bracket", "\\}"); //checked
+            = new WordType("closedcurlybracket", "\\}"); //added
     public static final WordType OPEN_BRACKET_WORD
-            = new WordType("open bracket", "\\("); //checked
+            = new WordType("openbracket", "\\("); //added
     public static final WordType CLOSED_BRACKET_WORD
-            = new WordType("closed bracket", "\\)"); //checked
+            = new WordType("closedbracket", "\\)"); //added
     public static final WordType OPEN_SQUARE_BRACKET_WORD
-            = new WordType("open square bracket", "\\["); //checked
+            = new WordType("open square bracket", "\\["); //added
     public static final WordType CLOSED_SQUARE_BRACKET_WORD
-            = new WordType("closed square bracket", "\\]"); //checked
+            = new WordType("closed square bracket", "\\]"); //added
     public static final WordType RETURN_WORD
-            = new WordType("return", "return"); //checked
+            = new WordType("return", "return"); //added
     public static final WordType CLASS_WORD
-            = new WordType("class", "Class"); //checked
+            = new WordType("class", "Class"); //added
     public static final WordType EXTENDS_CLASS_WORD
-            = new WordType("extends", "extends"); //checked
+            = new WordType("extends", "extends"); //added
 
 
     static {
@@ -200,6 +208,7 @@ public class WordTypes {
         putWordTypeToMap(INPUT_WORD);
         putWordTypeToMap(PRINT_WORD);
         putWordTypeToMap(PLUS_WORD);
+        putWordTypeToMap(COMMAND_ARG);
         putWordTypeToMap(MINUS_WORD);
         putWordTypeToMap(TIMES_WORD);
         putWordTypeToMap(DIV_WORD);
@@ -221,6 +230,7 @@ public class WordTypes {
         putWordTypeToMap(SHIFT_LEFT_WORD);
         putWordTypeToMap(BITWISE_UNARY_NOT_WORD);
         putWordTypeToMap(TERNARY_IF_WORD);
+        putWordTypeToMap(EMPTY_WORD);
         putWordTypeToMap(TERNARY_IF_ELSE_WORD);
         putWordTypeToMap(IF_WORD);
         putWordTypeToMap(ELIF_WORD);
@@ -241,6 +251,8 @@ public class WordTypes {
         putWordTypeToMap(CLASS_WORD);
         putWordTypeToMap(EXTENDS_CLASS_WORD);
         putWordTypeToMap(NAME_WORD);
+        putWordTypeToMap(COMMAND_END);
+        putWordTypeToMap(DEFINE_TYPE);
     }
 
     private WordTypes() {
